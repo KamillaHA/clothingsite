@@ -6,5 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Productlist</title>
   </head>
-  <body></body>
+
+  <body class="productlist">
+    <header class="mainNav">
+      <h1>Product List</h1>
+      <nav>
+        <a href="category.html">Categories</a>
+        <a href="productlist.html">Products</a>
+      </nav>
+    </header>
+
+    <main>
+      <template id="product-cardTemplate">
+        <article class="product-card">
+          <img
+            src="https://kea-alt-del.dk/t7/images/webp/640/1573.webp"
+            alt="Produkt Billede"
+          />
+          <h2>Leggins</h2>
+          <p>Pris: 600kr</p>
+          <a class="read-more" href="product.html" class="product-link"
+            >Se Produkt</a
+          >
+        </article>
+      </template>
+    </main>
+    <script src="js/productlist.js"></script>
+  </body>
 </html>
