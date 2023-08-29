@@ -1,4 +1,4 @@
-fetch("https://kea-alt-del.dk/t7/api/categories/")
+fetch("https://kea-alt-del.dk/t7/api/categories")
   .then((res) => res.json())
   .then(showCategories);
 
@@ -7,11 +7,13 @@ function showCategories(cats) {
 }
 
 function showCategory(cat) {
+  //fanger vores template
   const template = document.querySelector("template").content;
+  //cloner
   const clone = template.cloneNode(true);
-
+  //ændrer indhold
   clone.querySelector("a").textContent = cat.category;
   clone.querySelector("a").href = `productlist.html?category=${cat.category}`;
-
-  document.querySelector("letterGroup ol").appendChild(clone);
+  //appender
+  document.querySelector(".letterGroup ol").appendChild(clone);
 }

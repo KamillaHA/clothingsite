@@ -2,16 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Category</title>
+    <title>Brands</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="category">
     <header class="mainNav">
-      <h1>Categories</h1>
+      <h1><a href="index.html">Athletics <span>4</span>All</h1>
       <nav>
-        <a href="index.html">Frontpage</a>
         <a href="category.html">Categories</a>
         <a href="productlist.html">Products</a>
       </nav>
@@ -19,19 +18,13 @@
     <main>
       <div class="brandList">
         <section class="letterGroup">
-          <ol class="category-list">
-            <template>
-              <li>
-                <a class="category-list" href="productlist.html?category=brand"
-                  >Brands</a
-                >
-              </li>
-            </template>
-          </ol>
+          <template
+            ><li><a href="productlist.html">Accessories</a></li></template
+          >
+          <ol></ol>
         </section>
       </div>
     </main>
-
     <script src="js/category.js"></script>
   </body>
 </html>

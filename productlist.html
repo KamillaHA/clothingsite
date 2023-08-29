@@ -2,34 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Productlist</title>
+    <title>Products By Brand</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-
   <body class="productlist">
     <header class="mainNav">
-      <h1>Product list</h1>
+      <h1>Athletics <span>4</span>All</h1>
       <nav>
-        <a href="index.html">Frontpage</a>
         <a href="category.html">Categories</a>
         <a href="productlist.html">Products</a>
       </nav>
     </header>
-
     <main>
-      <template id="product-cardTemplate">
-        <article class="product-card">
+      <ol class="breadcrumbs">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="category.html">Categories</a></li>
+      </ol>
+      <h2>Apparel</h2>
+      <template id="smallProductTemplate">
+        <article class="smallProduct">
           <img
-            src="https://kea-alt-del.dk/t7/images/webp/640/1573.webp"
-            alt="Produkt Billede"
+            src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp"
+            alt="Sahara Team India Fanwear Round Neck Jersey"
           />
-          <h2>Leggings</h2>
-          <p>Pris: 600kr</p>
-          <a class="read-more" href="product.html" class="product-link"
-            >Se Produkt</a
-          >
+          <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
+          <p class="subtle">Tshirts | Nike</p>
+          <p class="price"><span>Prev.</span> DKK 1595,-</p>
+          <div class="discounted">
+            <p>Now DKK 1560,-</p>
+            <p>-34%</p>
+          </div>
+          <a class="read-more" href="product.html">Read More</a>
         </article>
       </template>
     </main>

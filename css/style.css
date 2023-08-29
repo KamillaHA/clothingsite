@@ -1,0 +1,200 @@
+:root {
+  --off-color: #0a3700;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.mainNav h1 span {
+  display: inline-block;
+  transform: scaleX(-1);
+  color: #0a3700;
+}
+.mainNav > * {
+  margin: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .mainNav {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-right: 50px;
+  }
+}
+
+.mainNav h1 {
+  margin-right: auto;
+}
+
+.letterLinks ol {
+  margin-top: 1rem;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.brandList ol {
+  list-style-type: none;
+}
+.brandList li {
+  border-bottom: 1px solid #f2fff2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.brandList a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+.brandList li::after {
+  display: block;
+  width: 20px;
+  height: 20px;
+  content: "";
+  transition: all 0.3s;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 14"><path fill="none" stroke="white" d="M.8 12.87l7.5-6-7.5-6"></path></svg>');
+  background-repeat: no-repeat;
+}
+.brandList li:hover {
+  background: #f2fff26a;
+  transition: transform 0.3s;
+}
+.brandList li:hover::after {
+  transform: translateX(8px);
+}
+
+@media screen and (min-width: 800px) {
+  .brandList ol {
+    column-count: 2;
+  }
+}
+
+.productlist main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 300px));
+  gap: 2rem;
+  margin-left: 4.5cqw;
+}
+.productlist main h2 {
+  grid-column: 1/-1;
+}
+.productlist article h3 {
+  font-size: 1rem;
+  flex-grow: 3;
+}
+.productlist article > * {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.subtle {
+  color: #0a3700;
+}
+.productlist article {
+  display: flex;
+  flex-direction: column;
+}
+.productlist article.soldOut img {
+  opacity: 0.5;
+}
+.productlist article.soldOut::before {
+  content: "Sold Out";
+  position: absolute;
+  color: #f2fff2;
+  padding: 1rem;
+}
+.productlist article .discounted,
+.productlist article .price span {
+  display: none;
+}
+.productlist article.onSale .discounted {
+  display: flex;
+  justify-content: space-between;
+}
+.discounted > p {
+  margin-bottom: 0;
+}
+.productlist article.onSale .price span {
+  display: initial;
+}
+.productlist article button {
+  margin-top: auto;
+}
+.productlist article {
+  margin-bottom: 1rem;
+}
+.discounted p:last-child {
+  background: #f2fff2;
+  padding: 0.2rem;
+}
+
+.breadcrumbs {
+  list-style-type: none;
+  display: flex;
+}
+.breadcrumbs li::after {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 10px;
+  content: "";
+  transition: all 0.3s;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 14"><path fill="none" stroke="white" d="M.8 12.87l7.5-6-7.5-6"></path></svg>');
+  background-repeat: no-repeat;
+}
+.breadcrumbs li:last-child::after {
+  background: none;
+}
+.purchaseBox {
+  background: #0a3700;
+  color: #f2fff2;
+  padding: 1rem;
+  margin-top: 10rem;
+}
+.info {
+  padding: 1rem;
+}
+.product select {
+  min-width: 100px;
+}
+.product main {
+  display: grid;
+}
+.product main .breadcrumbs,
+.product main img {
+  grid-column: 1/-1;
+}
+.purchaseBox form label {
+  gap: 1rem;
+}
+.purchaseBox button {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+}
+dt {
+  font-weight: 700;
+}
+@media screen and (min-width: 1000px) {
+  .product main {
+    grid-template-columns: 1fr 310px;
+  }
+
+  .productlist main {
+    margin-left: 10.5cqw;
+  }
+
+  .info {
+    order: 0;
+  }
+  .purchaseBox {
+    order: 2;
+    transform: translate(-50px, -100px);
+  }
+}

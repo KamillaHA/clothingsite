@@ -10,13 +10,6 @@ function showProduct(product) {
   document.querySelector(".purchaseBox h3").textContent =
     product.productdisplayname;
   document.querySelector(".purchaseBox .brand").textContent = product.brandname;
-  document.querySelector(".purchaseBox .category").textContent =
-    product.articletype;
-  document.querySelector(".purchaseBox .price").textContent = product.price;
-  document.querySelector(".purchaseBox .discount").textContent =
-    product.discount;
-  // document.querySelector(".purchaseBox .out-of-stock").textContent =
-  //   product.outofstock;
   document.querySelector(
     "img"
   ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;

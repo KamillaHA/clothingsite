@@ -10,21 +10,18 @@ function showProducts(products) {
 }
 
 function showProduct(product) {
-  const template = document.querySelector("#product-cardTemplate").content;
-
+  console.log(product);
+  const template = document.querySelector("#smallProductTemplate").content;
   const copy = template.cloneNode(true);
-
-  copy.querySelector("h2").textContent = product.productdisplayname;
-  copy.querySelector(
-    "img"
-  ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
-  copy.querySelector("p").textContent = product.price;
+  copy.querySelector("h3").textContent = product.productdisplayname;
   if (product.soldout) {
     copy.querySelector("article").classList.add("soldOut");
   }
   copy
     .querySelector(".read-more")
     .setAttribute("href", `product.html?id=${product.id}`);
-
+  copy.querySelector(
+    "img"
+  ).src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
   document.querySelector("main").appendChild(copy);
 }
