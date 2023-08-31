@@ -6,7 +6,6 @@ fetch("https://kea-alt-del.dk/t7/api/products/" + id)
   .then((data) => showProduct(data));
 
 function showProduct(product) {
-  console.log(product);
   document.querySelector(".purchaseBox h3").textContent =
     product.productdisplayname;
   document.querySelector(".purchaseBox .brand").textContent = product.brandname;

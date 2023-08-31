@@ -10,7 +10,6 @@ function showProducts(products) {
 }
 
 function showProduct(product) {
-  console.log(product);
   const template = document.querySelector("#smallProductTemplate").content;
   const copy = template.cloneNode(true);
   copy.querySelector("h3").textContent = product.productdisplayname;
