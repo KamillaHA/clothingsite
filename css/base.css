@@ -25,8 +25,7 @@ img {
 h1,
 h3,
 h4,
-h5,
-h6 {
+h5 {
   margin-bottom: 1rem;
   margin-top: 1em;
   font-weight: bold;
@@ -45,6 +44,23 @@ h2 {
 
 h3 {
   letter-spacing: -0.08rem;
+}
+
+h4 {
+  font-size: 2.7rem;
+  letter-spacing: -0.02rem;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 10cqw;
+}
+h5 {
+  font-size: 1rem;
+  letter-spacing: -0.05rem;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 1cqw;
 }
 
 p {
